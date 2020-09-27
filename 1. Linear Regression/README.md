@@ -16,9 +16,9 @@ model = Linear(in_features = 1, out_features = 1)
 ```
 Make predictions with random **weight** and **bias** using our model
 ```py
-x = torch([2.0]) # single input
+x = torch.tensor([2.0]) # single input
 print('single: ', model(x))
-x = torch([[2.0], [4.0]]) # multiple input
+x = torch.tensor([[2.0], [4.0]]) # multiple input
 print('multiple: ', model(x))
 ```
 Print and change our weight and bias to fit our model
@@ -36,7 +36,7 @@ torch.manual_seed(1)
 
 model = Linear(in_features = 1, out_features = 1)
 
-x = torch([[2.0], [4.0]]) # multiple input
+x = torch.tensor([[2.0], [4.0]]) # multiple input
 print('multiple: ', model(x))
 
 model.bias = 1

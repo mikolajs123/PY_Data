@@ -53,7 +53,7 @@ Get bias, weight, range of data and predictions
 w1 = w[0][0].item() # get weight at row 0 and column 0 and item to get not as tensor but as python number
 b1 = b[0].item() # get bias at column 0 and item to get not as tensor but as python number
 x1 = np.array([-30, 30]) # range of data from plot
-y1 = w1 * x1 + b1 # make our predictionts 
+y1 = b1 + w1 * x1 # make our predictionts 
 ```
 Visualize data and predictions
 ```py
@@ -82,7 +82,7 @@ plt.xlabel('x')
 w1 = w[0][0].item() # get weight at row 0 and column 0 and item to get not as tensor but as python number
 b1 = b[0].item() # get bias at column 0 and item to get not as tensor but as python number
 x1 = np.array([-30, 30]) # range of data from plot
-y1 = w1 * x1 + b1 # make our predictionts
+y1 = b1 + w1 * x1 # make our predictionts
 
 # Visualize data and predictions
 plt.plot(x1, y1, 'r')

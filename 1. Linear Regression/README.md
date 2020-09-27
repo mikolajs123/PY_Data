@@ -43,6 +43,13 @@ print(model.bias, model.weight)
 ## Py torch - Linear Regression with custom dataset
 Create dataset
 ```py
-X = torch.randn(100, 1) # 100 rows and 1 column
+X = torch.randn(100, 1) * 10 # 100 rows and 1 column and multiply by 10 to increase variation
+Y = X + 3 * torch.randn(100, 1)
+```
+Visualize dataset
+```py
+plt.plot(X.numpy(), Y.numpy(), 'o') # convert tensor to numpy to visualize
+plt.ylabel('y')
+plt.xlabel('x')
 ```
 ## Scikit

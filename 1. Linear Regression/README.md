@@ -5,6 +5,7 @@ Import torch and Linear class
 ```py
 import torch
 from torch.nn import Linear
+import matplotlib.pyplot as plt
 ```
 Use random seed for **weight** and **bias**
 ```py
@@ -23,8 +24,6 @@ print('multiple: ', model(x))
 ```
 Print and change our weight and bias to fit our model
 ```py
-model.bias = 1
-model.weight = 1
 print(model.bias, model.weight)
 ```
 Final code
@@ -39,8 +38,11 @@ model = Linear(in_features = 1, out_features = 1)
 x = torch.tensor([[2.0], [4.0]]) # multiple input
 print('multiple: ', model(x))
 
-model.bias = 1
-model.weight = 1
 print(model.bias, model.weight)
+```
+## Py torch - Linear Regression with custom dataset
+Create dataset
+```py
+X = torch.randn(100, 1) # 100 rows and 1 column
 ```
 ## Scikit

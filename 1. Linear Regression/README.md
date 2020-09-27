@@ -10,8 +10,9 @@ use random seed for weight and bias
 ```py
 torch.manual_seed(1)
 ```
-use random seed for weight and bias
+use Linear class and set in_features and out_features responsible for how many inputs produce how many outputs 
 ```py
-torch.manual_seed(1)
+model = Linear(in_features = 1, out_features = 1)
+print(model.bias, model.weight)
 ```
 ## Scikit
